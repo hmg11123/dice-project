@@ -8,7 +8,11 @@ import {
  SafeAreaView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { AntDesign } from "@expo/vector-icons";
+import {
+ AntDesign,
+ FontAwesome5,
+ MaterialCommunityIcons,
+} from "@expo/vector-icons";
 
 const CURRENT_WIDTH = Dimensions.get("window").width;
 
@@ -55,10 +59,46 @@ const App = () => {
      <View style={styles.top}>
       <View style={styles.leftTop}>
        <View style={styles.leftTopTop}>
-        <Text>{diceResult1}</Text>
+        <Text>
+         {diceResult1 === 0 ? (
+          <FontAwesome5 name="dice" size={100} color="black" />
+         ) : diceResult1 === 1 ? (
+          <FontAwesome5 name="dice-one" size={100} color="black" />
+         ) : diceResult1 === 2 ? (
+          <FontAwesome5 name="dice-two" size={100} color="black" />
+         ) : diceResult1 === 3 ? (
+          <FontAwesome5 name="dice-three" size={100} color="black" />
+         ) : diceResult1 === 4 ? (
+          <FontAwesome5 name="dice-four" size={100} color="black" />
+         ) : diceResult1 === 5 ? (
+          <FontAwesome5 name="dice-five" size={100} color="black" />
+         ) : (
+          diceResult1 === 6 && (
+           <FontAwesome5 name="dice-six" size={100} color="black" />
+          )
+         )}
+        </Text>
        </View>
        <View style={styles.leftTopBottom}>
-        <Text>{diceResult2}</Text>
+        <Text>
+         {diceResult2 === 0 ? (
+          <FontAwesome5 name="dice" size={100} color="black" />
+         ) : diceResult2 === 1 ? (
+          <FontAwesome5 name="dice-one" size={100} color="black" />
+         ) : diceResult2 === 2 ? (
+          <FontAwesome5 name="dice-two" size={100} color="black" />
+         ) : diceResult2 === 3 ? (
+          <FontAwesome5 name="dice-three" size={100} color="black" />
+         ) : diceResult2 === 4 ? (
+          <FontAwesome5 name="dice-four" size={100} color="black" />
+         ) : diceResult2 === 5 ? (
+          <FontAwesome5 name="dice-five" size={100} color="black" />
+         ) : (
+          diceResult2 === 6 && (
+           <FontAwesome5 name="dice-six" size={100} color="black" />
+          )
+         )}
+        </Text>
        </View>
       </View>
       <View style={styles.leftBottom}>
